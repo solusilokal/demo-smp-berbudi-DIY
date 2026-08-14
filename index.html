@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#1e3a8a"> <!-- Warna tema browser disesuaikan dengan warna primary (Blue 900) -->
+    
+    <title>SMP Berbudi Yogyakarta | Membentuk Generasi Cerdas & Berkarakter</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="SMP Berbudi Yogyakarta | Membentuk Generasi Cerdas & Berkarakter">
+    <meta name="description" content="SMP Berbudi Yogyakarta berkomitmen memberikan pendidikan berkualitas untuk masa depan gemilang dengan perpaduan keunggulan akademik, nilai moral, dan Kurikulum Merdeka.">
+    <meta name="keywords" content="SMP Berbudi, SMP Berbudi Yogyakarta, Sekolah Menengah Pertama Yogyakarta, PPDB SMP Yogyakarta, Pendaftaran Siswa Baru SMP Jogja, Sekolah Adiwiyata Yogyakarta, Kurikulum Merdeka SMP, Sekolah Berkarakter">
+    <meta name="author" content="SMP Berbudi Yogyakarta">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="gambarasset/LogoSEO.ico">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smpberbudiyogyakarta.solusilokal.id/"> <!-- Ganti dengan domain sekolah Anda yang sebenarnya -->
+    <meta property="og:title" content="SMP Berbudi Yogyakarta | Membentuk Generasi Cerdas & Berkarakter">
+    <meta property="og:description" content="Pendaftaran Peserta Didik Baru (PPDB) SMP Berbudi Yogyakarta telah dibuka. Bergabunglah bersama kami untuk mendapatkan pendidikan berkualitas unggul dan berakhlak mulia.">
+    <meta property="og:image" content="gambarasset/gambarSEO.webp"> <!-- Menggunakan gambar background utama sekolah -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://smpberbudiyogyakarta.solusilokal.id/"> <!-- Ganti dengan domain sekolah Anda yang sebenarnya -->
+    <meta property="twitter:title" content="SMP Berbudi Yogyakarta | Membentuk Generasi Cerdas & Berkarakter">
+    <meta property="twitter:description" content="Pendaftaran Peserta Didik Baru (PPDB) SMP Berbudi Yogyakarta telah dibuka. Bergabunglah bersama kami untuk mendapatkan pendidikan berkualitas unggul dan berakhlak mulia.">
+    <meta property="twitter:image" content="gambarasset/gambarSEO.webp">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind Config for Custom Colors & Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a', // Blue 900
+                        secondary: '#eab308', // Yellow 500
+                        accent: '#fef08a', // Yellow 200
+                        light: '#f8fafc',
+                        dark: '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth Scrolling */
+        html { scroll-behavior: smooth; }
+        /* Masonry Fix */
+        .masonry-item { break-inside: avoid; margin-bottom: 1rem; }
+    </style>
+</head>
+<body class="font-sans text-gray-700 bg-white antialiased">
+
+    <!-- 1. Header & Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-primary/95 backdrop-blur shadow-md transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="gambarasset/logonavigasi.webp" alt="Logo SMP Berbudi" class="w-10 h-10 object-contain rounded-full bg-white p-0.5">
+                    <span class="font-bold text-xl text-white tracking-wide">SMP Berbudi</span>
+                </div>
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#profil" class="text-white hover:text-secondary transition font-medium">Profil</a>
+                    <a href="#program" class="text-white hover:text-secondary transition font-medium">Program</a>
+                    <a href="#fasilitas" class="text-white hover:text-secondary transition font-medium">Fasilitas</a>
+                    <a href="#kegiatan" class="text-white hover:text-secondary transition font-medium">Kegiatan</a>
+                    <a href="#berita" class="text-white hover:text-secondary transition font-medium">Berita</a>
+                    <a href="#kontak" class="text-white hover:text-secondary transition font-medium">Kontak</a>
+                    <a href="#ppdb" class="bg-secondary text-primary px-5 py-2 rounded-full font-bold hover:bg-yellow-400 transition shadow-lg">Daftar Sekarang</a>
+                </nav>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-secondary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary pb-4 px-4">
+            <a href="#profil" class="block py-2 text-white hover:text-secondary font-medium">Profil</a>
+            <a href="#program" class="block py-2 text-white hover:text-secondary font-medium">Program</a>
+            <a href="#fasilitas" class="block py-2 text-white hover:text-secondary font-medium">Fasilitas</a>
+            <a href="#kegiatan" class="block py-2 text-white hover:text-secondary font-medium">Kegiatan</a>
+            <a href="#ppdb" class="block mt-4 text-center bg-secondary text-primary px-5 py-2 rounded-full font-bold">Daftar Sekarang</a>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="relative h-screen flex items-center justify-center pt-20">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="gambarasset/profil.webp" alt="Siswa belajar" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-primary/70 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <span class="inline-block py-1 px-3 rounded-full bg-secondary/20 text-secondary font-semibold text-sm mb-4 backdrop-blur-sm border border-secondary/30">Penerimaan Siswa Baru 2026/2027 Dibuka</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                Membentuk Generasi <span class="text-secondary">Cerdas</span> & <span class="text-secondary">Berbudi Pekerti</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Selamat datang di SMP Berbudi Yogyakarta. Kami berkomitmen memberikan pendidikan berkualitas untuk masa depan yang gemilang dengan perpaduan keunggulan akademik dan nilai moral.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://maps.google.com/maps?q=Jl.+Imogiri+Timur+No.210,+Giwangan,+Kec.+Umbulharjo,+Yogyakarta" target="_blank" class="bg-secondary text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all shadow-[0_0_20px_rgba(234,179,8,0.4)] flex items-center justify-center gap-2">
+                    Kunjungi sekolah kami <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Profil Sekolah & Pimpinan -->
+    <section id="profil" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Profil Sekolah</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Sejarah & Sambutan -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-gray-900">Sejarah & Gambaran Umum</h3>
+                    <p class="text-gray-600 leading-relaxed text-justify">
+                        Berdiri sejak tahun 1985, SMP Berbudi Yogyakarta telah menjadi institusi pendidikan terpercaya di jantung kota pelajar. Berawal dari semangat mencerdaskan anak bangsa, kami terus berinovasi dalam metode pembelajaran dengan tetap mempertahankan akar budaya luhur Nusantara. Kami memadukan fasilitas modern dengan lingkungan yang asri dan kondusif untuk belajar.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 h-full">
+                            <i class="fa-solid fa-bullseye text-3xl text-primary mb-3"></i>
+                            <h4 class="font-bold text-gray-900">Visi</h4>
+                            <p class="text-sm text-gray-600 mt-2 text-justify">Menjadi institusi pendidikan terdepan yang menghasilkan lulusan berprestasi, berwawasan global, dan berakhlak mulia.</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 h-full">
+                            <i class="fa-solid fa-list-check text-3xl text-primary mb-3"></i>
+                            <h4 class="font-bold text-gray-900">Misi</h4>
+                            <ul class="text-sm text-gray-600 mt-2 list-disc ml-4 space-y-1 text-justify">
+                                <li>Menyelenggarakan pendidikan berkualitas.</li>
+                                <li>Membangun karakter disiplin & religius.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-secondary rounded-2xl transform translate-x-4 translate-y-4"></div>
+                    <img src="gambarasset/gedungutama.webp" alt="Gedung Sekolah" class="relative rounded-2xl shadow-xl w-full h-96 object-cover border-4 border-white" />
+                </div>
+            </div>
+
+            <!-- Pimpinan & Staf -->
+            <div class="bg-light rounded-3xl p-8 md:p-12 mb-20">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+                    <div class="col-span-1 text-center md:text-left">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Kepala Sekolah" class="w-48 h-48 rounded-full mx-auto md:mx-0 object-cover border-4 border-white shadow-lg mb-4" />
+                        <h4 class="font-bold text-xl text-primary">Bpk. Dr. Budi Santoso, M.Pd</h4>
+                        <p class="text-secondary font-medium">Kepala Sekolah</p>
+                    </div>
+                    <div class="col-span-1 md:col-span-2">
+                        <i class="fa-solid fa-quote-left text-4xl text-gray-300 mb-4"></i>
+                        <p class="text-xl text-gray-700 italic leading-relaxed">
+                            "Di SMP Berbudi, kami tidak hanya mentransfer ilmu pengetahuan, tetapi juga membentuk karakter dan mengasah potensi setiap individu. Kami percaya bahwa setiap anak memiliki keistimewaan yang siap untuk dikembangkan."
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Grid Staf Pengajar -->
+                <div class="mt-12 pt-8 border-t border-gray-200">
+                    <h4 class="font-bold text-lg text-center mb-8">Tim Pengajar Berdedikasi Kami</h4>
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <!-- Guru 1 -->
+                        <div class="text-center w-32">
+                            <img src="gambarasset/guruipa.webp" class="w-20 h-20 rounded-full mx-auto object-cover mb-2 shadow">
+                            <p class="font-semibold text-sm">Ibu Rina</p>
+                            <p class="text-xs text-gray-500">Guru IPA</p>
+                        </div>
+                        <!-- Guru 2 -->
+                        <div class="text-center w-32">
+                            <img src="gambarasset/gurumtk.webp" class="w-20 h-20 rounded-full mx-auto object-cover mb-2 shadow">
+                            <p class="font-semibold text-sm">Bpk. Andi</p>
+                            <p class="text-xs text-gray-500">Guru Matematika</p>
+                        </div>
+                        <!-- Guru 3 -->
+                        <div class="text-center w-32">
+                            <img src="gambarasset/gurubinggris.webp" class="w-20 h-20 rounded-full mx-auto object-cover mb-2 shadow">
+                            <p class="font-semibold text-sm">Ibu Siti</p>
+                            <p class="text-xs text-gray-500">Guru B. Inggris</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Peta Lokasi (Google Maps Embed) -->
+            <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Lokasi Strategis Kami</h3>
+                <div class="rounded-2xl overflow-hidden shadow-lg h-96 border border-gray-200">
+                    <iframe src="https://maps.google.com/maps?q=Jl.+Imogiri+Timur+No.210,+Giwangan,+Kec.+Umbulharjo,+Yogyakarta&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Akreditasi & Pencapaian -->
+    <section class="py-16 bg-primary text-white relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 opacity-10">
+            <i class="fa-solid fa-award text-[300px] -mt-10 -mr-10"></i>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+                <!-- Akreditasi -->
+                <div class="text-center lg:text-left">
+                    <div class="inline-flex items-center justify-center p-6 bg-white rounded-2xl shadow-xl mb-6">
+                        <span class="text-6xl font-extrabold text-primary">A</span>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-3">Akreditasi Unggul</h2>
+                    <p class="text-gray-300">SMP Berbudi secara konsisten mempertahankan nilai Akreditasi A, membuktikan standar pelayanan pendidikan terbaik dari BAN-S/M.</p>
+                </div>
+                
+                <!-- Pencapaian -->
+                <div class="lg:col-span-2">
+                    <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3"><i class="fa-solid fa-trophy text-secondary"></i> Prestasi Gemilang</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-white/10 p-5 rounded-xl backdrop-blur-sm border border-white/20">
+                            <h4 class="font-bold text-secondary text-lg mb-1">Juara 1 OSN Matematika</h4>
+                            <p class="text-sm text-gray-300">Tingkat Provinsi DI Yogyakarta 2023</p>
+                        </div>
+                        <div class="bg-white/10 p-5 rounded-xl backdrop-blur-sm border border-white/20">
+                            <h4 class="font-bold text-secondary text-lg mb-1">Medali Emas FLS2N</h4>
+                            <p class="text-sm text-gray-300">Kategori Seni Tari Tingkat Nasional 2022</p>
+                        </div>
+                        <div class="bg-white/10 p-5 rounded-xl backdrop-blur-sm border border-white/20">
+                            <h4 class="font-bold text-secondary text-lg mb-1">Sekolah Adiwiyata Mandiri</h4>
+                            <p class="text-sm text-gray-300">Penghargaan Lingkungan Hidup 2023</p>
+                        </div>
+                        <div class="bg-white/10 p-5 rounded-xl backdrop-blur-sm border border-white/20">
+                            <h4 class="font-bold text-secondary text-lg mb-1">Juara Umum Porseni</h4>
+                            <p class="text-sm text-gray-300">Tingkat Kota Yogyakarta 3 tahun berturut-turut</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Program Sekolah -->
+    <section id="program" class="py-24 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Program Unggulan</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Kurikulum dan program kerja yang dirancang untuk mendukung perkembangan kognitif, afektif, dan psikomotorik siswa secara utuh.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
+                    <div class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fa-solid fa-book-open text-2xl text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Kurikulum Merdeka Plus</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Penerapan Kurikulum Merdeka yang disesuaikan, memberi ruang bagi siswa untuk belajar sesuai minat dan bakat dengan pendekatan *Project Based Learning*.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
+                    <div class="w-16 h-16 bg-yellow-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors">
+                        <i class="fa-solid fa-leaf text-2xl text-secondary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Pendidikan Karakter & Moral</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Pembiasaan 5S (Senyum, Salam, Sapa, Sopan, Santun), ibadah bersama, serta kegiatan kerelawanan untuk memupuk empati dan kedisiplinan siswa.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
+                    <div class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fa-solid fa-laptop-code text-2xl text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Bilingual & Literasi Digital</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Program intensif Bahasa Inggris terintegrasi serta pengenalan dasar-dasar coding dan etika digital sejak dini untuk menghadapi era industri 4.0.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Sarana Prasarana -->
+    <section id="fasilitas" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Fasilitas Pendukung</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Kami menyediakan fasilitas modern dan lengkap untuk menunjang kenyamanan dan optimalisasi proses kegiatan belajar mengajar.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Fasilitas 1 -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-square">
+                    <img src="gambarasset/ruangkelas.webp" alt="Gedung Kelas" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent flex flex-col justify-end p-6">
+                        <i class="fa-solid fa-school text-3xl text-secondary mb-2"></i>
+                        <h3 class="text-xl font-bold text-white">Ruang Kelas AC</h3>
+                        <p class="text-gray-200 text-sm mt-1 opacity-0 group-hover:opacity-100 transition duration-300">Dilengkapi Smart TV & Proyektor.</p>
+                    </div>
+                </div>
+                <!-- Fasilitas 2 -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-square">
+                    <img src="gambarasset/perpustakaandigital.webp" alt="Perpustakaan" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent flex flex-col justify-end p-6">
+                        <i class="fa-solid fa-book text-3xl text-secondary mb-2"></i>
+                        <h3 class="text-xl font-bold text-white">Perpustakaan Digital</h3>
+                        <p class="text-gray-200 text-sm mt-1 opacity-0 group-hover:opacity-100 transition duration-300">Koleksi buku lengkap & area baca nyaman.</p>
+                    </div>
+                </div>
+                <!-- Fasilitas 3 -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-square">
+                    <img src="gambarasset/laboratoriumipa.webp" alt="Laboratorium" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent flex flex-col justify-end p-6">
+                        <i class="fa-solid fa-flask text-3xl text-secondary mb-2"></i>
+                        <h3 class="text-xl font-bold text-white">Laboratorium IPA</h3>
+                        <p class="text-gray-200 text-sm mt-1 opacity-0 group-hover:opacity-100 transition duration-300">Alat peraga modern & perlengkapan praktikum sains yang lengkap.</p>
+                    </div>
+                </div>
+                <!-- Fasilitas 4 -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-square">
+                    <img src="gambarasset/gelanggangolahraga.webp" alt="Lapangan Olahraga" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent flex flex-col justify-end p-6">
+                        <i class="fa-solid fa-basketball text-3xl text-secondary mb-2"></i>
+                        <h3 class="text-xl font-bold text-white">Gelanggang Olahraga</h3>
+                        <p class="text-gray-200 text-sm mt-1 opacity-0 group-hover:opacity-100 transition duration-300">Lapangan basket, futsal, dan area senam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Kegiatan Sekolah & Ekstrakurikuler -->
+    <section id="kegiatan" class="py-24 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Kegiatan Siswa</h2>
+                    <div class="w-24 h-1 bg-secondary rounded-full"></div>
+                </div>
+                <p class="text-gray-600 max-w-lg md:text-right">Bebaskan kreativitas dan asah bakat melalui puluhan pilihan kegiatan ekstrakurikuler serta organisasi siswa di sekolah.</p>
+            </div>
+
+            <!-- Ekstrakurikuler -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+                <div class="bg-white p-6 rounded-xl border border-gray-100 text-center hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-3"><i class="fa-solid fa-users text-primary"></i></div>
+                    <h4 class="font-bold">OSIS / MPK</h4>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-100 text-center hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-3"><i class="fa-solid fa-tent text-primary"></i></div>
+                    <h4 class="font-bold">Pramuka</h4>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-100 text-center hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-3"><i class="fa-solid fa-music text-primary"></i></div>
+                    <h4 class="font-bold">Seni Musik & Tari</h4>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-100 text-center hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-3"><i class="fa-solid fa-futbol text-primary"></i></div>
+                    <h4 class="font-bold">Klub Olahraga</h4>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-100 text-center hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-3"><i class="fa-solid fa-pen-nib text-primary"></i></div>
+                    <h4 class="font-bold">Jurnalistik</h4>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-100 text-center hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-3"><i class="fa-solid fa-code text-primary"></i></div>
+                    <h4 class="font-bold">Klub Coding</h4>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-100 text-center hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-3"><i class="fa-solid fa-language text-primary"></i></div>
+                    <h4 class="font-bold">English Club</h4>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-100 text-center hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-3"><i class="fa-solid fa-camera text-primary"></i></div>
+                    <h4 class="font-bold">Fotografi</h4>
+                </div>
+            </div>
+
+            <!-- PPDB Snippet Banner -->
+            <div class="bg-gradient-to-r from-primary to-blue-800 rounded-2xl p-8 md:p-10 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+                <div class="absolute -right-10 -top-10 opacity-10">
+                    <i class="fa-solid fa-bullhorn text-9xl"></i>
+                </div>
+                <div class="relative z-10 max-w-2xl text-center md:text-left">
+                    <h3 class="text-2xl font-bold mb-2">Ingin menjadi bagian dari keluarga Berbudi?</h3>
+                    <p class="text-blue-100">Pendaftaran Peserta Didik Baru (PPDB) Tahun Ajaran 2026/2027 telah dibuka! Dapatkan potongan biaya fasilitas untuk pendaftaran gelombang pertama.</p>
+                </div>
+                <div class="relative z-10 whitespace-nowrap">
+                    <a href="#ppdb" class="bg-secondary text-primary px-8 py-3 rounded-full font-bold hover:bg-yellow-400 transition shadow-lg inline-block">Info PPDB & Daftar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Formulir PPDB Online -->
+    <section id="ppdb" class="py-24 bg-primary text-white relative">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Formulir Pendaftaran Siswa Baru (PPDB)</h2>
+                <p class="text-blue-200">Isi data awal di bawah ini, dan tim panitia PPDB kami akan segera menghubungi Anda untuk informasi lebih lanjut.</p>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 shadow-2xl text-gray-800">
+                <form action="#" method="POST">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Nama Calon Siswa -->
+                        <div class="col-span-1 md:col-span-2">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Nama Lengkap Calon Siswa *</label>
+                            <input type="text" placeholder="Masukkan nama lengkap sesuai ijazah" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" required>
+                        </div>
+                        
+                        <!-- Asal Sekolah -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Asal Sekolah (SD/MI) *</label>
+                            <input type="text" placeholder="Contoh: SD Negeri 1 Yogyakarta" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" required>
+                        </div>
+
+                        <!-- Nama Orang Tua/Wali -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Nama Orang Tua / Wali *</label>
+                            <input type="text" placeholder="Masukkan nama orang tua/wali" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" required>
+                        </div>
+
+                        <!-- Nomor WhatsApp -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Nomor WhatsApp Aktif *</label>
+                            <input type="tel" placeholder="08xxxxxxxxxx" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" required>
+                        </div>
+
+                        <!-- Jalur Pendaftaran -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Jalur Pendaftaran</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition bg-white">
+                                <option>Jalur Reguler</option>
+                                <option>Jalur Prestasi</option>
+                                <option>Jalur Afirmasi</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="col-span-1 md:col-span-2 mt-4">
+                            <button type="submit" class="w-full bg-secondary text-primary py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 transition shadow-lg flex justify-center items-center gap-2">
+                                <i class="fa-regular fa-paper-plane"></i> Kirim Formulir Pendaftaran
+                            </button>
+                            <p class="text-xs text-center text-gray-500 mt-4">*Data yang Anda masukkan terjamin kerahasiaannya dan hanya digunakan untuk keperluan PPDB.</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Artikel / Berita Terkini -->
+    <section id="berita" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Berita & Artikel Terkini</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600">Dapatkan informasi terbaru seputar kegiatan sekolah, prestasi, dan pengumuman akademik.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Artikel 1 -->
+                <article class="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-shadow group flex flex-col">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="gambarasset/berita1.webp" alt="Berita 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-secondary text-primary text-xs font-bold px-3 py-1 rounded-full">Acara Sekolah</div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <span class="text-xs text-gray-500 mb-2"><i class="fa-regular fa-calendar mr-1"></i> 12 Agustus 2026</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition">Perayaan HUT Kemerdekaan RI ke-81 Berlangsung Meriah</h3>
+                        <p class="text-sm text-gray-600 mb-6 flex-grow">SMP Berbudi menggelar serangkaian lomba dan pentas seni budaya yang diikuti seluruh siswa untuk memperingati hari kemerdekaan...</p>
+                        <a href="#" class="text-primary font-semibold hover:text-secondary inline-flex items-center gap-2">Baca Selengkapnya <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                    </div>
+                </article>
+
+                <!-- Artikel 2 -->
+                <article class="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-shadow group flex flex-col">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="gambarasset/berita2.webp" alt="Berita 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">Prestasi</div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <span class="text-xs text-gray-500 mb-2"><i class="fa-regular fa-calendar mr-1"></i> 05 Agustus 2026</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition">Tim Robotik Berhasil Sabet Medali Perak di Kompetisi Nasional</h3>
+                        <p class="text-sm text-gray-600 mb-6 flex-grow">Sebuah kebanggaan, perwakilan ekskul Robotik SMP Berbudi berhasil memenangkan posisi kedua pada ajang Nasional Tech Expo 2026...</p>
+                        <a href="#" class="text-primary font-semibold hover:text-secondary inline-flex items-center gap-2">Baca Selengkapnya <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                    </div>
+                </article>
+
+                <!-- Artikel 3 -->
+                <article class="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-shadow group flex flex-col">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="gambarasset/berita3.webp" alt="Berita 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-gray-600 text-white text-xs font-bold px-3 py-1 rounded-full">Pengumuman</div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <span class="text-xs text-gray-500 mb-2"><i class="fa-regular fa-calendar mr-1"></i> 28 Juli 2026</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition">Jadwal Pengambilan Buku Paket & Seragam Tahun Ajaran Baru</h3>
+                        <p class="text-sm text-gray-600 mb-6 flex-grow">Diberitahukan kepada seluruh wali murid kelas 7, 8, dan 9 bahwa pengambilan buku paket perpustakaan akan dijadwalkan pada...</p>
+                        <a href="#" class="text-primary font-semibold hover:text-secondary inline-flex items-center gap-2">Baca Selengkapnya <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Galeri Visual (Masonry) -->
+    <section class="py-24 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Galeri Kegiatan</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600">Dokumentasi momen berharga, study tour, dan kreativitas siswa SMP Berbudi.</p>
+            </div>
+
+            <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
+                <div class="masonry-item rounded-xl overflow-hidden relative group">
+                    <img src="gambarasset/kegiatanbelajar.webp" alt="Galeri" class="w-full h-auto">
+                    <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold">Kegiatan Belajar</span>
+                    </div>
+                </div>
+                <div class="masonry-item rounded-xl overflow-hidden relative group">
+                    <img src="gambarasset/studytour.webp" alt="Galeri" class="w-full h-auto">
+                    <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold">Study Tour</span>
+                    </div>
+                </div>
+                <div class="masonry-item rounded-xl overflow-hidden relative group">
+                    <img src="gambarasset/pentasseni.webp" alt="Galeri" class="w-full h-auto">
+                    <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold">Pentas Seni</span>
+                    </div>
+                </div>
+                <div class="masonry-item rounded-xl overflow-hidden relative group">
+                    <img src="gambarasset/upacarabendera.webp" alt="Galeri" class="w-full h-auto">
+                    <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold">Upacara Bendera</span>
+                    </div>
+                </div>
+                <div class="masonry-item rounded-xl overflow-hidden relative group">
+                    <img src="gambarasset/kegiatanpramuka.webp" alt="Galeri" class="w-full h-auto">
+                    <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold">Ekskul Pramuka</span>
+                    </div>
+                </div>
+                <div class="masonry-item rounded-xl overflow-hidden relative group">
+                    <img src="gambarasset/kegiatankeagamaan.webp" alt="Galeri" class="w-full h-auto">
+                    <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold">Kegiatan Keagamaan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Kontak Kami -->
+    <section id="kontak" class="py-24 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="grid grid-cols-1 md:grid-cols-5 h-full">
+                    <div class="p-10 md:p-12 md:col-span-2 bg-primary text-white flex flex-col justify-center">
+                        <h3 class="text-3xl font-bold mb-8">Hubungi Kami</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot text-xl text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg text-secondary">Alamat Sekolah</h4>
+                                    <p class="text-gray-300 mt-1 leading-relaxed">Jl. Imogiri Timur No.210, Giwangan, Kec. Umbulharjo, Yogyakarta</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-phone text-xl text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg text-secondary">Telepon / WhatsApp</h4>
+                                    <p class="text-gray-300 mt-1">(0274) 1234567<br>0895-2960-5601 (Admin)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-envelope text-xl text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg text-secondary">Email</h4>
+                                    <p class="text-gray-300 mt-1">info@smpberbudi.sch.id</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-10 md:p-12 md:col-span-3 bg-white">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Kirim Pesan Cepat</h3>
+                        <form action="#">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                                <input type="text" placeholder="Nama Anda" class="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:border-primary outline-none">
+                                <input type="email" placeholder="Email Anda" class="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:border-primary outline-none">
+                            </div>
+                            <input type="text" placeholder="Subjek" class="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:border-primary outline-none mb-4">
+                            <textarea rows="4" placeholder="Tulis pesan Anda..." class="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:border-primary outline-none mb-4"></textarea>
+                            <button type="submit" class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-800 transition shadow-md">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Footer Khusus -->
+    <footer class="bg-dark text-gray-400 pt-16 pb-6 border-t-4 border-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <!-- Brand & Deskripsi -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="gambarasset/logonavigasi.webp" alt="Logo SMP Berbudi" class="w-10 h-10 object-contain rounded-full bg-white p-0.5">
+                        <span class="font-bold text-2xl text-white tracking-wide">SMP Berbudi</span>
+                    </div>
+                    <p class="mb-6 leading-relaxed text-sm max-w-sm text-justify">
+                        Berdedikasi untuk menciptakan generasi muda yang tidak hanya cerdas secara akademis, tetapi juga memiliki akhlak dan budi pekerti yang luhur demi masa depan bangsa.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://wa.me/6289529605601" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-secondary hover:text-primary transition">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                        <a href="https://instagram.com/solusilokal.id" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-secondary hover:text-primary transition">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#profil" class="hover:text-secondary transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-secondary"></i> Profil Sekolah</a></li>
+                        <li><a href="#program" class="hover:text-secondary transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-secondary"></i> Program & Kurikulum</a></li>
+                        <li><a href="#fasilitas" class="hover:text-secondary transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-secondary"></i> Fasilitas</a></li>
+                        <li><a href="#ppdb" class="hover:text-secondary transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-secondary"></i> Pendaftaran PPDB</a></li>
+                        <li><a href="#berita" class="hover:text-secondary transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-secondary"></i> Berita & Artikel</a></li>
+                    </ul>
+                </div>
+
+                <!-- Jam Operasional -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Jam Operasional</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex justify-between border-b border-gray-800 pb-1">
+                            <span>Senin - Kamis</span>
+                            <span class="text-white">07:00 - 15:00</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-800 pb-1">
+                            <span>Jumat</span>
+                            <span class="text-white">07:00 - 11:30</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-800 pb-1">
+                            <span>Sabtu (Ekskul)</span>
+                            <span class="text-white">08:00 - 12:00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Minggu</span>
+                            <span class="text-secondary font-semibold">Tutup</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright Bar -->
+            <div class="border-t border-gray-800 pt-6 mt-6 flex flex-col md:flex-row justify-between items-center text-xs md:text-sm">
+                <p>&copy; 2026 SMP Berbudi Yogyakarta. Hak cipta dilindungi undang-undang.</p>
+                <p class="mt-2 md:mt-0">
+                    Developed by <a href="https://solusilokal.id" target="_blank" class="text-secondary hover:text-white font-semibold transition">SolusiLokal.ID</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <!-- WA Button -->
+        <a href="https://wa.me/6289529605601" target="_blank" class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform duration-300 relative group" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+            <!-- Tooltip -->
+            <span class="absolute right-16 bg-white text-gray-800 text-sm font-semibold py-1 px-3 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                Hubungi Admin
+                <div class="absolute right-0 top-1/2 -mt-1 -mr-1 w-2 h-2 bg-white transform rotate-45"></div>
+            </span>
+        </a>
+    </div>
+
+    <!-- Script for Mobile Menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
